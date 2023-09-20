@@ -1,0 +1,80 @@
+---
+title: "Un arbre décisionnel pour l'attribut alt"
+title_html: "Un arbre décisionnel pour l'attribut <code>alt</code>"
+permalink: /tutorials/images/decision-tree/fr
+ref: /tutorials/images/decision-tree/
+lang: fr
+description:
+image: /content-images/wai-tutorials/images/social.png
+github:
+  branch: 'master-2.0'
+  repository: w3c/wai-tutorials
+  path: 'content/images/decision-tree.fr.md'
+translators:
+  - name: Rémi Bétin
+resource:
+  ref: /tutorials/images/
+navigation:
+  previous: /tutorials/images/imagemap/
+  next: /tutorials/images/tips/
+
+wcag_techniques:
+
+
+metafooter: true
+last_updated: 2023-09-20
+editors:
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+update_editors:
+  - Brian Elton
+contributors:
+  - Voir <a href="/WAI/tutorials/acknowledgements/">Remerciements</a>
+support: Développé avec le groupe de travail Education et Promotion(<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>). Développé avec le soutien du <a href="https://www.w3.org/WAI/ACT/">projet WAI-ACT</a>, co-financé par le <strong>programme <abbr title="Information Society Technologies">IST</abbr> de la Commission européenne</strong>.
+---
+
+{::nomarkdown}
+{% include box.html type="start" h="2" title="Vue d'ensemble" class="full" %}
+{:/}
+
+Cet arbre décisionnel décrit comment utiliser l'attribut `alt` de l'élément `<img>` dans diverses situations. Pour certains types d'images, des approches alternatives existent, comme utiliser des images d'arrière-plan en CSS pour les images décoratives, ou des polices web plutôt que des images de texte.
+
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
+
+- **Est-ce que l'image contient du texte ?**
+  - {:.yes} **Oui :**
+    -   **… et le texte est aussi présent à proximité comme du texte *réel*.**
+      _Utilisez un attribut `alt` vide. Voir [Images décoratives](/tutorials/images/decorative/)._
+    -   **… et le texte est seulement présenté pour des effets visuels.**
+      _Utilisez un attribut `alt` vide. Voir [Images décoratives](/tutorials/images/decorative/)._
+    -   **… et le texte a une fonction spécifique: il s'agit d'une icône par exemple.**
+      _Utilisez l'attribut `alt` pour communiquer la fonction de l'image. Voir [Images fonctionnelles](/tutorials/images/functional/)._
+    -   **… et le texte dans l'image n'est pas présent ailleurs.**
+      _Utilisez l'attribut `alt` pour inclure le texte de l'image. Voir [Images de texte](/tutorials/images/textual/#image-of-styled-text-with-decorative-effect)._
+  - {:.no} **Non :**
+    - Continuez.
+- **Est-ce que l'image est utilisée dans un lien ou un bouton, et serait-il difficile voire impossible de comprendre ce que le lien ou le boutton fait, si l'image n'était pas présente ?**
+  - {:.yes} **Oui:**
+    - _Utilisez l'attribut `alt` pour communiquer la destination du lien ou de l'action prise. Voir [Images fonctionnelles](/tutorials/images/functional/)._
+  - {:.no} **Non :**
+    - Continuez.
+- **Est-ce que l'image contribue à comprendre la signification de la page courante ou du contexte ?**
+  - {:.yes} **Oui :**
+    - **… et c'est une simple illustration ou photographie.**
+      _Utilisez dans l'attribut `alt` une description brève de l'image, d'une manière qui transmette la signification. Voir [Images informatives](/tutorials/images/informative/)._
+    - **… et c'est un graphique ou une information complexe.**
+      _Incluez l'information contenue dans l'image ailleurs sur la page. Voir [Images complexes](/tutorials/images/complex/)._
+    - **… et elle présente du contenu qui est redondant avec le texte **réel** à proximité.**
+      _Utilisez un attribut `alt` vide. Voir [Images fonctionnelles](/tutorials/images/functional/#logo-image-within-link-text) (redondantes)._
+  - {:.no} **Non :**
+    - Continuez.
+- **Est-ce que l'image est purement décorative, ou pas à destination de l'utilisateur ?**
+  - {:.yes} ** Oui :**
+    - _Utilisez un attribut `alt` vide. Voir [Images décoratives](/tutorials/images/decorative/)._
+  - {:.no} **Non :**
+    - Continuez.
+- **L'usage de l'image n'est pas listé ci-dessus&nbsp;; ou le texte `alt` à fournir n'est pas clair ?**
+  - {:.yes} Cet arbre décisionnel ne couvre **pas** tous les cas. Pour des informations détaillées sur les textes alternatifs à fournir, référez-vous à [la page Concepts - Images](/tutorials/images/).
+{:.decision-tree}
