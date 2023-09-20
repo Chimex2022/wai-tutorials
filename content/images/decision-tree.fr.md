@@ -66,12 +66,12 @@ Cet arbre décisionnel décrit comment utiliser l'attribut `alt` de l'élément 
       _Utilisez dans l'attribut `alt` une description brève de l'image, d'une manière qui transmette la signification. Voir [Images informatives](/tutorials/images/informative/)._
     - **… et c'est un graphique ou une information complexe.**
       _Incluez l'information contenue dans l'image ailleurs sur la page. Voir [Images complexes](/tutorials/images/complex/)._
-    - **… et elle présente du contenu qui est redondant avec le texte **réel** à proximité.**
+    - **… et elle présente du contenu qui est redondant avec le texte **réel** à proximité.
       _Utilisez un attribut `alt` vide. Voir [Images fonctionnelles](/tutorials/images/functional/#logo-image-within-link-text) (redondantes)._
   - {:.no} **Non :**
     - Continuez.
 - **Est-ce que l'image est purement décorative, ou pas à destination de l'utilisateur ?**
-  - {:.yes} ** Oui :**
+  - {:.yes} **Oui :**
     - _Utilisez un attribut `alt` vide. Voir [Images décoratives](/tutorials/images/decorative/)._
   - {:.no} **Non :**
     - Continuez.
